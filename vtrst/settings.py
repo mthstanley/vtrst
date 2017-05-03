@@ -25,7 +25,7 @@ SECRET_KEY = '8xf=bcdk1y%w=jehxd$%pzm7+=k=^t+x1tq)uh#x2&1v*cs%k6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mtstanley.tech']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'www.mtstanley.tech', 'mtstanley.tech',]
 
 
 # Application definition
