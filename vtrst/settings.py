@@ -137,6 +137,10 @@ INSTALLED_APPS = (
     'treebeard',
     'djangocms_text_ckeditor',
     'filer',
+    'reversion',
+    'parler',
+    'sortedm2m',
+    'taggit',
     'easy_thumbnails',
     'djangocms_column',
     'djangocms_link',
@@ -148,6 +152,14 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
+    'aldryn_bootstrap3',
+    'aldryn_apphooks_config',
+    'aldryn_categories',
+    'aldryn_common',
+    'aldryn_newsblog',
+    'aldryn_people',
+    'aldryn_reversion',
+    'aldryn_translation_tools',
     'vtrst'
 )
 
