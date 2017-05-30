@@ -2,6 +2,12 @@
 import os
 import sys
 
+from dotenv import load_dotenv, find_dotenv
+
+# load enviroment variables from .env file
+dotenv_path = os.path.join(os.path.dirname(__file__), 'vtrst/settings/.env')
+load_dotenv(dotenv_path)
+
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "vtrst.settings")
 

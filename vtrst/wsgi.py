@@ -11,6 +11,10 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "vtrst.settings")
+from dotenv import load_dotenv, find_dotenv
+
+# load enviroment variables from .env file
+dotenv_path = os.path.join(os.path.dirname(__file__), 'settings/.env')
+load_dotenv(dotenv_path)
 
 application = get_wsgi_application()
