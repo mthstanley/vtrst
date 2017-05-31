@@ -9,7 +9,6 @@ dotenv_path = os.path.join(os.path.dirname(__file__), 'vtrst/settings/.env')
 load_dotenv(dotenv_path)
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "vtrst.settings")
 
     from django.core.management import execute_from_command_line
 
