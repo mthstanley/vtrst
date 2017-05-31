@@ -1,6 +1,8 @@
 import os
 gettext = lambda s: s
-DATA_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+print("file dir %s" % os.path.dirname(__file__))
+print("data dir %s" % DATA_DIR)
 """
 Django settings for vtrst project.
 
@@ -16,7 +18,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+print("base dir %s" % BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -71,6 +74,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+print("static file path %s" % STATIC_ROOT)
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'vtrst', 'static'),
