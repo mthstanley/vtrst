@@ -160,6 +160,7 @@ INSTALLED_APPS = (
     'aldryn_people',
     'aldryn_reversion',
     'aldryn_translation_tools',
+    'aldryn_background_image',
     'vtrst'
 )
 
@@ -192,6 +193,8 @@ CMS_TEMPLATES = (
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
 )
+
+DJANGOCMS_STYLE_CHOICES = ['container', 'content', 'teaser', 'page-heading']
 
 CMS_PERMISSION = True
 
