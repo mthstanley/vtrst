@@ -53,7 +53,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/">{{ request.site.name }}</a>
+                <a class="navbar-brand" href="/">{{ site.name }}</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,20 +68,22 @@
     </nav>
 
     <!-- Page Header -->
-    {% placeholder header or %}
-        <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url({% static 'img/about-bg.jpg' %})">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <div class="page-heading">
-                            <h1>{% page_attribute 'page_title' %}</h1>
+    {% block header %}
+        {% placeholder header or %}
+            <!-- Set your background image for this header on the line below. -->
+            <header class="intro-header" style="background-image: url({% static 'img/about-bg.jpg' %})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                            <div class="page-heading">
+                                <h1>{% page_attribute 'page_title' %}</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-    {% endplaceholder %}
+            </header>
+        {% endplaceholder %}
+    {% endblock %}
 
     <!-- Main Content -->
     <div class="container">
@@ -125,7 +127,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; {{ request.site.name }} {% now "Y" %}</p>
+                    <p class="copyright text-muted">Copyright &copy; {{ site.name }} {% now "Y" %}</p>
                 </div>
             </div>
         </div>
