@@ -1,0 +1,16 @@
+{% extends "aldryn_people/fullwidth.html" %}
+{% load i18n cms_tags %}
+
+{% block title %}{{ person.name }} - {{ block.super }}{% endblock %}
+
+{% block people_content %}
+    <div class="aldryn aldryn-people aldryn-people-detail">
+        <div class="row">
+            {% include "aldryn_people/includes/person.html" with person=person detail_view=True group=False %}
+        </div>
+    </div>
+{% endblock people_content %}
+
+{% block people_footer %}
+{% static_placeholder "People Footer" %}
+{% endblock people_footer %}

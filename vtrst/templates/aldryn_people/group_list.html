@@ -1,0 +1,23 @@
+{% extends "aldryn_people/fullwidth.html" %}
+{% load cms_tags i18n %}
+
+{% block people_content %}
+    <div class="aldryn aldryn-people aldryn-group-list">
+        {% for group in group_list %}
+            <a href="{{ group.get_absolute_url }}"><h2>{% render_model group 'name' %}</h2></a>
+            <div class="row">
+                {% for person in group.people.all|dictsort:"name" %}
+                    {% include "aldryn_people/includes/person.html" with person=person detail_view=False group=True %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+        {% if ungrouped_people %}
+            <h2>{% trans "Ungrouped" %}</h2>
+            <div class="row">
+                {% for person in ungrouped_people %}
+                    {% include "aldryn_people/includes/person.html" with person=person detail_view=False group=True %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock people_content %}
