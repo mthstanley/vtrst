@@ -241,7 +241,7 @@ LOGGING = {
         'logfile': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': BASE_DIR + "/logfile",
+            'filename': BASE_DIR + "/vtrst.log",
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'standard',
