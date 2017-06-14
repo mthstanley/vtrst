@@ -59,6 +59,7 @@ coverage.xml
 local_settings.py
 /static/
 /media/
+*_uwsgi.ini
 
 # Flask stuff:
 instance/
